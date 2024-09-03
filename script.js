@@ -23,3 +23,10 @@ for (let i = 0; i < showModel.length; i++) {
   closeModel.addEventListener('click', closeView);
   overlay.addEventListener('click', closesideclick);
 }
+document.addEventListener('keydown', function (e) {
+  if (e.key == 'Enter') {
+    if (!modeldata.classList.contains('hidden')) {
+      closeView();
+    }
+  }
+});
